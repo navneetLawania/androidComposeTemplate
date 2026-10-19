@@ -19,7 +19,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.unitx.androegg"
+        applicationId = "com.unitx.template"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
