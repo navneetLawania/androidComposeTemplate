@@ -7,14 +7,14 @@ import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.runtime.rememberSaveableStateHolderNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
-import com.unitx.template.presentation.navigation.route.AndroeggRoute
+import com.unitx.template.presentation.navigation.route.TemplateRoute
 import com.unitx.template.presentation.screen.HomeScreen
 import com.unitx.template.presentation.screen.SecondScreen
 import kotlin.collections.listOf
 
 @Composable
 fun NavigationRoot(modifier: Modifier = Modifier) {
-    val backStack = rememberNavBackStack(AndroeggRoute.HomeScreenKey)
+    val backStack = rememberNavBackStack(TemplateRoute.HomeScreenKey)
 
     NavDisplay(
         backStack = backStack,
@@ -27,14 +27,14 @@ fun NavigationRoot(modifier: Modifier = Modifier) {
             rememberViewModelStoreNavEntryDecorator()
         ),
         entryProvider = entryProvider {
-            entry<AndroeggRoute.HomeScreenKey> {
+            entry<TemplateRoute.HomeScreenKey> {
                 HomeScreen(
                     onButtonClick = {
-                        backStack.add(AndroeggRoute.SecondScreenKey(it))
+                        backStack.add(TemplateRoute.SecondScreenKey(it))
                     }
                 )
             }
-            entry<AndroeggRoute.SecondScreenKey> {
+            entry<TemplateRoute.SecondScreenKey> {
                 SecondScreen(it.id)
             }
         }

@@ -67,7 +67,7 @@ private val Shapes = Shapes(
 )
 
 @Composable
-fun AndroeggTheme(
+fun TemplateTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     dynamicColor: Boolean = false,
     content: @Composable () -> Unit
