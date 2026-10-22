@@ -13,7 +13,7 @@ import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext.startKoin
 import timber.log.Timber
 
-class AndroeggApp: Application() {
+class TemplateApp: Application() {
 
     override fun onCreate() {
         super.onCreate()
@@ -52,7 +52,7 @@ class AndroeggApp: Application() {
     private fun di() {
         startKoin {
             androidLogger()
-            androidContext(this@AndroeggApp)
+            androidContext(this@TemplateApp)
             modules(appModule)
         }
     }
