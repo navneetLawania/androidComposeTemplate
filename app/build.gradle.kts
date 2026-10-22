@@ -113,4 +113,7 @@ dependencies {
 
     // Signal: https://github.com/Unitx-in/signal
     implementation(libs.signal)
+
+    //Icons:
+    implementation(libs.androidx.compose.material.icons.extended)
 }
